@@ -2,7 +2,7 @@
   "name": "elpho/elpho",
   "description": "The elpho framework core",
   "require": {
-    "elpho/lang": ">=0.0.0"
+    "elpho/lang": "0.1.*"
   },
   "autoload": {
     "psr-4": {
