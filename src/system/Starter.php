@@ -8,7 +8,7 @@
     private static $exitMethod;
     private static $started = false;
 
-    public static function start($path){
+    public static function start(){
       if (self::$started)
         throw new \Exception("Starter can only be run once!");
 

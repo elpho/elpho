@@ -7,4 +7,4 @@
   }
 
   require_once('src/system/topLevel.php');
-  \elpho\system\Starter::start(__DIR__);
+  \elpho\system\Starter::start();
