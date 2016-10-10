@@ -1,0 +1,13 @@
+{
+  "name": "elpho/elpho",
+  "description": "The elpho framework core",
+  "require": {
+    "elpho/lang": ">=0.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "elpho\\system\\": "src/system/"
+    }
+  },
+  "license": "ISC"
+}
