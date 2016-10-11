@@ -1,4 +1,4 @@
-![alt text][logo]
+![elpho logo][logo]
 Extension Library for PHp Object-orientation
 ============================================
 
@@ -14,14 +14,17 @@ Here is the very verbose HelloWorld.php example using the `elpho/lang` package:
 
 ```php
 <?php
+   //composer
+   require 'vendor/autoload.php';
+
    //The framework
-   require("path/to/elpho/startup.php");
+   require 'vendor/elpho/elpho/startup.php';
 
    use elpho\lang\String;
 
    //The class name is same as file without ".php"
    class HelloWorld{
-      //Entry method (d'JAVu)
+      //Entry method ($args is a parsed php://input)
       public static final function main($args=array()){
          //Wrapper class with lots of functions
          //Not really useful here
@@ -29,6 +32,9 @@ Here is the very verbose HelloWorld.php example using the `elpho/lang` package:
 
          //It calls toString() using PHP magic methods
          print($word);
+      }
+      //(optional) Shutdown method
+      public static final function shutdown(){
       }
    }
 ?>
@@ -40,8 +46,11 @@ Here is the "Hello World" using the `elpho/mvc` package:
 
 ```php
 <?php
+   //composer
+   require 'vendor/autoload.php';
+
    //The framework
-   require("path/to/elpho/startup.php");
+   require 'vendor/elpho/elpho/startup.php';
 
    use elpho\mvc\Router;
 
@@ -114,4 +123,4 @@ Mail me at spark.crz(at)gmail.com if you wanna chat!
 Or join `##php` and `##php-br` channels at [freenode.net IRC servers][1]
 
 [1]: http://freenode.net/
-[logo]: https://raw.githubusercontent.com/SparK-Cruz/elpho/master/logo.png
+[logo]: https://raw.githubusercontent.com/elpho/elpho/master/logo.png
