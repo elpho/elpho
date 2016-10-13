@@ -8,11 +8,11 @@
     private static $exitMethod;
     private static $started = false;
 
-    public static function start(){
+    public static function start($defaultNamespace){
       if (self::$started)
         throw new \Exception("Starter can only be run once!");
 
-      self::registerMain();
+      self::registerMain($_SERVER["SCRIPT_FILENAME"], $defaultNamespace);
       register_shutdown_function(array("\\elpho\\system\\Starter","callPrimaryMethods"));
       self::$started = true;
     }
@@ -45,13 +45,13 @@
       call(self::$exitMethod);
     }
 
-    private static function registerEntryClass($name){
-      $target = $name;
-      if(!class_exists($target))
-        $target = '\\main\\'.$target;
+    private static function registerEntryClass($target){
+      if(!class_exists($target)){
+        if(!defined("DEBUG"))
+          return
 
-      if(!class_exists($target))
-        throw new Exception("Could not find entry class '$name' at global or main namespace");
+        throw new \Exception("Could not find entry class '$target'");
+      }
 
       self::registerEntry(array($target,"main"));
       self::registerExit(array($target,"shutdown"));
@@ -71,11 +71,14 @@
       }
     }
 
-    public static function registerMain($filename=null){
+    public static function registerMain($filename=null, $namespace="main"){
+      self::$entryMethod = null;
+      self::$exitMethod = null;
+
       if(!$filename)
-        $filename = $_SERVER["SCRIPT_FILENAME"];
+        return
 
       $currentClass = basename($filename,".php");
-      self::registerEntryClass($currentClass);
+      self::registerEntryClass($namespace.'\\'.$currentClass);
     }
   }

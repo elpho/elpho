@@ -7,7 +7,8 @@
   "autoload": {
     "psr-4": {
       "elpho\\system\\": "src/system/"
-    }
+    },
+    "files": ["src/startup.php"]
   },
   "license": "ISC"
 }
