@@ -76,7 +76,7 @@
       self::$exitMethod = null;
 
       if(!$filename)
-        return
+        return;
 
       $currentClass = basename($filename,".php");
       self::registerEntryClass($namespace.'\\'.$currentClass);
