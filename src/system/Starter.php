@@ -48,7 +48,7 @@
     private static function registerEntryClass($target){
       if(!class_exists($target)){
         if(!defined("DEBUG"))
-          return
+          return;
 
         throw new \Exception("Could not find entry class '$target'");
       }
