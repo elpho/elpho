@@ -4,7 +4,6 @@ Extension Library for PHp Object-orientation
 
 Your non-invasive, lightweight, fast, dev-tool framework
 
-### WARNING
 The framework's core structure is dedicated to solve the leaked scope and procedural ancestry of PHP.
 That said, it's nothing but a language extension.
 
@@ -14,11 +13,12 @@ Here is the very verbose HelloWorld.php example using the `elpho/lang` package:
 
 ```php
 <?php
-   //composer
+   //Composer
    require 'vendor/autoload.php';
 
-   //The framework
-   require 'vendor/elpho/elpho/startup.php';
+   //Tell the framework what's your entry class using registerMain
+   //If it's the same as your filename you can leave it out
+   //registerMain("HelloWorld");
 
    use elpho\lang\String;
 
@@ -46,11 +46,13 @@ Here is the "Hello World" using the `elpho/mvc` package:
 
 ```php
 <?php
-   //composer
+   namespace myProject;
+
+   //Composer
    require 'vendor/autoload.php';
 
-   //The framework
-   require 'vendor/elpho/elpho/startup.php';
+   //Tell the framework what's your entry class
+   registerMain('myProject\\Index');
 
    use elpho\mvc\Router;
 
@@ -104,7 +106,7 @@ The system folder contains all the framework core files.
 Userland functions are declared in the file `system/topLevel.php`, they are:
 
 1. `registerMain(className)`
-This method is used when you need to tell elpho that your exposed file has a different name from the entry class.
+This method is used when you need to tell elpho that your exposed file has a different name from the entry class (i.e. when it's namespaced).
 Just pass the main class fullname and it will call it when it finishes loading your app.
 
 2. `call(function [, argument...])`
