@@ -1,6 +1,6 @@
 <?php
-  function registerMain($filename=null){
-    \elpho\system\Starter::registerMain($filename);
+  function registerMain($className=null){
+    \elpho\system\Starter::registerEntryClass($className);
   }
   function call($callback,$args=null,$_=null){
     $args = func_get_args();

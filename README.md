@@ -103,9 +103,9 @@ Here is the "Hello World" using the `elpho/mvc` package:
 The system folder contains all the framework core files.
 Userland functions are declared in the file `system/topLevel.php`, they are:
 
-1. `registerMain(file)`
-This method is used when you need to tell elpho that your exposed file is not the main class.
-Just pass the main class filename and it will call it when it finishes loading your app.
+1. `registerMain(className)`
+This method is used when you need to tell elpho that your exposed file has a different name from the entry class.
+Just pass the main class fullname and it will call it when it finishes loading your app.
 
 2. `call(function [, argument...])`
 An alias to `call_user_func`.
