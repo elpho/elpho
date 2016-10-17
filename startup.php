@@ -7,4 +7,4 @@
   }
 
   require_once('src/system/topLevel.php');
-  \elpho\system\Starter::start(__NAMESPACE__);
+  \elpho\system\Starter::start();
