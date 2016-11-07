@@ -20,7 +20,7 @@ Here is the very verbose HelloWorld.php example using the `elpho/lang` package:
    //If it's the same as your filename you can leave it out
    //registerMain("HelloWorld");
 
-   use elpho\lang\String;
+   use elpho\lang\Text;
 
    //The class name is same as file without ".php"
    class HelloWorld{
@@ -28,7 +28,7 @@ Here is the very verbose HelloWorld.php example using the `elpho/lang` package:
       public static final function main($args=array()){
          //Wrapper class with lots of functions
          //Not really useful here
-         $word = new String("Hello World!");
+         $word = new Text("Hello World!");
 
          //It calls toString() using PHP magic methods
          print($word);
