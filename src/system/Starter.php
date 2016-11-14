@@ -65,13 +65,9 @@
     }
 
     public static function callPrimaryMethods(){
-      try{
-        self::fixShutdownScope();
-        self::callEntry(parse_str(file_get_contents("php://input"),$inputData));
-        self::callExit();
-      }catch(\Exception $e){
-        echo $e->getMessage();
-      }
+      self::fixShutdownScope();
+      self::callEntry(parse_str(file_get_contents("php://input"),$inputData));
+      self::callExit();
     }
 
     private static function registerEntryFile($filename=null, $namespace=""){
