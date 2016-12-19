@@ -122,7 +122,7 @@ Returns true if the list of arguments in the **current function** matches the ty
 This framework is a work in progress.
 
 Mail me at spark.crz(at)gmail.com if you wanna chat!
-Or join `##php` and `##php-br` channels at [freenode.net IRC servers][1]
+Or join `#php` and `#php-br` channels at [freenode.net IRC servers][1]
 
 [1]: http://freenode.net/
 [logo]: https://raw.githubusercontent.com/elpho/elpho/master/logo.png
