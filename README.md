@@ -1,5 +1,5 @@
 ![elpho logo][logo]
-Extension Library for PHp Object-orientation
+Extension Library for PHP Object-orientation
 ============================================
 
 Your non-invasive, lightweight, fast, dev-tool framework
