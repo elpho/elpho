@@ -1,5 +1,5 @@
 ![elpho logo][logo]
-Extension Library for PHp Object-orientation
+Extension Library for PHP Object-orientation
 ============================================
 
 Your non-invasive, lightweight, fast, dev-tool framework
@@ -122,7 +122,7 @@ Returns true if the list of arguments in the **current function** matches the ty
 This framework is a work in progress.
 
 Mail me at spark.crz(at)gmail.com if you wanna chat!
-Or join `##php` and `##php-br` channels at [freenode.net IRC servers][1]
+Or join `#php` and `#php-br` channels at [freenode.net IRC servers][1]
 
 [1]: http://freenode.net/
 [logo]: https://raw.githubusercontent.com/elpho/elpho/master/logo.png
